@@ -86,4 +86,12 @@ plugins:
   - jekyll-paginate
   # - jekyll-admin
 
-exclude:            [vendor]
+exclude:
+  - README.md
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - changelog.md
+  - "*.Rmd"
+  - vendor
+  - .travis.yml
