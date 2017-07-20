@@ -31,9 +31,9 @@ disqus:
   id:               ""
 
 # URL
-url:                "https://" # the base hostname & protocol for your site
+url:                "https://thesowah.github.io/jekyllbase/" # the base hostname & protocol for your site
 # url:                "http://localhost:4000" # use this url when you develop
-baseurl:            "" # the subpath of your site, e.g. /blog
+baseurl:            "https://thesowah.github.io/jekyllbase" # the subpath of your site, e.g. /blog
 
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -58,7 +58,7 @@ nav:
   - name:           "Tags"
     url:            "/tags"
   - name:           "Github"
-    url:            "https://"
+    url:            "#"
 
 # Sass
 sass:
@@ -84,6 +84,20 @@ defaults:
 plugins:
   - jekyll-seo-tag
   - jekyll-paginate
-  # - jekyll-admin
+  - jekyll-admin
 
-exclude:            [vendor]
+# for git pages
+gems:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-admin
+
+exclude:
+  - README.md
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - changelog.md
+  - "*.Rmd"
+  - vendor
+  - .travis.yml
