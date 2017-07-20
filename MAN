@@ -1,3 +1,0 @@
-# Jekyll source running http://www.anaanu.site/
-
-This is based on Kiko Plus Theme.
