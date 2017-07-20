@@ -31,8 +31,8 @@ disqus:
   id:               ""
 
 # URL
-# url:                "https://github.com/thesowah/jekyllbase" # the base hostname & protocol for your site
-url:                "http://localhost:4000" # use this url when you develop
+url:                "https://thesowah.github.io/jekyllbase/" # the base hostname & protocol for your site
+# url:                "http://localhost:4000" # use this url when you develop
 baseurl:            "" # the subpath of your site, e.g. /blog
 
 
