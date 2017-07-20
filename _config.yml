@@ -86,6 +86,12 @@ plugins:
   - jekyll-paginate
   - jekyll-admin
 
+# for git pages
+gems:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-admin
+
 exclude:
   - README.md
   - Rakefile
