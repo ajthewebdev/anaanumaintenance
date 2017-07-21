@@ -33,6 +33,38 @@ body {
   }
 }
 
+.section__services {
+  padding: 2em 0;
+}
+
+.section__title {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #7a7a7a;
+}
+
+.section__body {
+  padding: 1rem 0;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.column__left {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 0 1 30%;
+  font-weight: 600;
+  padding-right: 2rem;
+}
+.column__right {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 0 1 70%;
+
+  span {color: #7a7a7a;}
+}
 /*--------------
   Links
   -------------- */
