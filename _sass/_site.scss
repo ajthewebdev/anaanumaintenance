@@ -16,9 +16,15 @@ body {
   padding: 0;
 }
 
+.page__highlight {
+  height: 10px;
+  width: 100%;
+  background-color: #008791;
+}
+
 .content-container {
   max-width: 48rem;
-  padding: 5rem 1rem;
+  padding: 2rem 1rem;
   margin-left:  auto;
   margin-right: auto;
 
@@ -27,25 +33,53 @@ body {
   }
 }
 
+/*--------------
+  Links
+  -------------- */
+a {
+  color: $base-color;
+}
 
 /*--------------
   Header
   -------------- */
+.header__wrapper {
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0rem 2rem;
+}
+
+.hero__body {
+  h1 {
+    margin-top: 0;
+    padding-top: 0;
+    border-bottom: none;
+  }
+}
+
 .header {
   padding: 2%;
   margin-bottom: 1.5em;
+  background-color: #f7f7f7;
+
 
   &-title {
-    margin: 0.3em 0;
+    margin: 0;
     font-size: 2.25em;
     line-height: 1.2em;
     font-weight: 600;
+    display: inline-block;
 
     a {
       color: $base-color;
       &:hover,
       &:focus {
         text-decoration: none;
+      }
+
+      img {
+        height: 60px;
       }
     }
 
@@ -56,18 +90,25 @@ body {
   }
 
   &-nav {
+    display: inline-block;
+    float: right;
+    margin: 0.6em 0;
     a {
       color: $oc-gray-7;
       text-transform: lowercase;
       -webkit-transition: all .2s ease;
          -moz-transition: all .2s ease;
               transition: all .2s ease;
-      margin-right: .3rem;
+      margin-right: 1.5rem;
+      text-transform: capitalize;
+      font-weight: 500;
 
+      &:last-child { margin-right: 0}
       &:hover,
       &:focus {
-        color: $oc-gray-7;
+        color: #39bcaa;
         text-decoration: none;
+        border-bottom: 2px solid #008791;
       }
     }
   }
@@ -180,7 +221,7 @@ body {
 .list {
   &-post {
     padding: 4% 2%;
-    
+
     &:hover {
       background-color: $background-over-color;
       border-color: transparent;
