@@ -7,11 +7,14 @@
     </div>
     <nav class="header-nav">
       {% for nav in site.nav %}
-      {% if nav.url contains 'http://' or nav.url contains 'https://' %}
-      <a href="{{ nav.url }}">{{ nav.name }}</a>
-      {% else %}
-      <a href="{{ nav.url | prepend: site.baseurl }}">{{ nav.name }}</a>
-      {% endif %}
+        {% if nav.url contains 'http://' or nav.url contains 'https://' %}
+          <a href="{{ nav.url }}">{{ nav.name }}</a>
+        {% else %}
+          <a href="{{ nav.url | prepend: site.baseurl }}"
+          {% if page.url == nav.url %}class='active'{% endif %}>
+            {{ nav.name }}
+          </a>
+        {% endif %}
       {% endfor %}
     </nav>
   </div>

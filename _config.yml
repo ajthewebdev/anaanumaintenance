@@ -52,7 +52,7 @@ kramdown:
 # Navigation
 nav:
   - name:           "Studio"
-    url:            "/about"
+    url:            "/"
   # - name:           "Blog"
   #   url:            "/archive"
   # - name:           "About"
