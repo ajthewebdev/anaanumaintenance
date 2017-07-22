@@ -44,7 +44,7 @@ h1 {
   padding-bottom: 0.3em;
   font-size: 2.25em;
   line-height: 1.2em;
-  border-bottom: 1px solid #eee;
+  // border-bottom: 1px solid #eee;
 }
 
 h2 {
@@ -52,25 +52,25 @@ h2 {
   padding-bottom: 0.3em;
   font-size: 1.75em;
   line-height: 1.225em;
-  border-bottom: 1px solid #eee;
+  // border-bottom: 1px solid #eee;
 }
 
-h3 { 
-  font-size: 1.5em; 
+h3 {
+  font-size: 1.5em;
   line-height: 1.43em;
 }
 
-h4 { 
+h4 {
   font-size: 1.25em;
 }
 
-h5 { 
-  font-size: 1em; 
+h5 {
+  font-size: 1em;
 }
 
-h6 { 
+h6 {
   font-size: 1em;
-  color: $oc-gray-6; 
+  color: $oc-gray-6;
 }
 
 /*--------------
@@ -88,7 +88,7 @@ p {
   -------------- */
 
 //  Reset list
-ol, 
+ol,
 ul,
 dl {
   margin: 0 0 1em;
@@ -98,68 +98,68 @@ dl {
 }
 
 //  Positioning Bullets
-ol, 
-ul {
-  > li {
-    &:before {
-      position: absolute;
-      width: $li-bullets-width;
-      margin-left: -$li-bullets-width;
-      display: inline-block;
-      box-sizing: border-box;
-      text-align: right;
-    }
-  }
-}
+// ol,
+// ul {
+//   > li {
+//     &:before {
+//       position: absolute;
+//       width: $li-bullets-width;
+//       margin-left: -$li-bullets-width;
+//       display: inline-block;
+//       box-sizing: border-box;
+//       text-align: right;
+//     }
+//   }
+// }
 
 // Restyle <ul>
-ul {
-  > li:before {
-    content: "\2022";
-    padding-right: $ul-bullets-right-space;
-    font-family: $ul-bullets-font;
-    font-size: $ul-bullets-font-size;
-    line-height: $ul-bullets-font-line-height;
-  }
-}
+// ul {
+//   > li:before {
+//     content: "\2022";
+//     padding-right: $ul-bullets-right-space;
+//     font-family: $ul-bullets-font;
+//     font-size: $ul-bullets-font-size;
+//     line-height: $ul-bullets-font-line-height;
+//   }
+// }
 
 // Restyle <ol>
-ol {
-  counter-reset: section;
+// ol {
+//   counter-reset: section;
 
-  > li:before {
-    counter-increment: section;
-    content: counter(section) ".";
-    padding-right: $ol-bullets-right-space;
-    font-family: $ol-bullets-font;
-    font-size: $ol-bullets-font-size;
-    line-height: $ol-bullets-font-line-height;
-  }
-}
+//   > li:before {
+//     counter-increment: section;
+//     content: counter(section) ".";
+//     padding-right: $ol-bullets-right-space;
+//     font-family: $ol-bullets-font;
+//     font-size: $ol-bullets-font-size;
+//     line-height: $ol-bullets-font-line-height;
+//   }
+// }
 
 //  Refine Spacing
-ol, 
-ul {
-  > li {
-    margin: 0 auto $li-bottom-space $li-bullets-width;
-    line-height: $li-line-height;
-    
-    > ol,
-    > ul {
-      margin-top: $li-bottom-space;
-    }
-  }
-}
+// ol,
+// ul {
+//   > li {
+//     margin: 0 auto $li-bottom-space $li-bullets-width;
+//     line-height: $li-line-height;
 
-li {
-  > ol,
-  > ul {
-    > li {
-      font-size: ($li-child-size-ratio * 1em);
-      margin: 0 auto ($li-bottom-space * $li-child-size-ratio) ($li-bullets-width * $li-child-size-ratio);
-    }
-  }
-}
+//     > ol,
+//     > ul {
+//       margin-top: $li-bottom-space;
+//     }
+//   }
+// }
+
+// li {
+//   > ol,
+//   > ul {
+//     > li {
+//       font-size: ($li-child-size-ratio * 1em);
+//       margin: 0 auto ($li-bottom-space * $li-child-size-ratio) ($li-bullets-width * $li-child-size-ratio);
+//     }
+//   }
+// }
 
 dt {
   float: left;
@@ -186,7 +186,7 @@ dd {
 }
 
 /*--------------
-  
+
   -------------- */
 
 hr {

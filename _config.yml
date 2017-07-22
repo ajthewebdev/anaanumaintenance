@@ -1,5 +1,5 @@
 # Basic
-name:               "Project name"
+name:               "Anaanu Webstudio"
 
 author:
   facebook:         your-id
@@ -53,12 +53,12 @@ kramdown:
 nav:
   - name:           "Studio"
     url:            "/about"
-  - name:           "Blog"
-    url:            "/archive"
-  - name:           "About"
-    url:            "/tags"
-  - name:           "Contact"
-    url:            "#"
+  # - name:           "Blog"
+  #   url:            "/archive"
+  # - name:           "About"
+  #   url:            "/tags"
+  # - name:           "Contact"
+  #   url:            "#"
 
 # Sass
 sass:
