@@ -1,5 +1,6 @@
 # Basic
 name:               "Anaanu Webstudio"
+description: "Everything websites"
 
 # URL
 url:                "http://localhost:4000" # use this url when you develop

@@ -1,122 +1,219 @@
+@include reset;
+
+// variables
+$color__light-green: #39bcaa;
+$color__dark-green: #008791;
+$color__light-grey: #f7f7f7;
+$color__dark-grey: #787a7f;
+$color__black: #141414;
+$width__max: 1024px;
+
 body {
-  font-size: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: $color__black;
 }
 
-body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
-  font-size-adjust: 0.5;
+.page__highlight {
+  height: 10px;
+  background-color: $color__dark-green;
 }
 
-#page {
-  font-size: 1em;
-  /* equivalent to 16px */
-  line-height: 1.25;
-  /* equivalent to 20px */
-}
+.header {
+  background-color: $color__light-grey;
+  box-shadow: 0 -0.17em 0.75em 0 rgba(0,0,0,0.08) inset;
 
-@media (min-width: 43.75em) {
-  #page {
-    font-size: 1em;
-    /* equivalent to 16px */
-    line-height: 1.375;
-    /* equivalent to 22px */
+  .header-wrapper {
+    max-width: $width__max;
+    margin: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .header-logo {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .header-logo,
+  .header-nav {
+    display: inline-block;
+  }
+  .header-nav {
+    padding-top: 2rem;
+    float: right;
+    a {
+      color: $color__black;
+      margin-right: 2rem;
+      font-weight: 500;
+
+      &:focus,
+      &:hover {
+        color: $color__light-green;
+        border-bottom: 2px solid $color__light-green;
+      }
+    }
+    a.active {
+      color: $color__dark-green;
+      border-bottom: 2px solid $color__dark-green;
+    }
+    a:last-child { margin-right: 0;}
   }
 }
 
-h1 {
-  font-size: 2em;
-  /* 2x body copy size = 32px */
-  line-height: 1.25;
-  /* 45px / 36px */
-}
+.footer {
+  background-color: $color__light-grey;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  box-shadow: 0 0.17em 0.75em 0 rgba(0,0,0,0.08) inset;
 
-@media (min-width: 43.75em) {
-  h1 {
-    font-size: 2.5em;
-    /* 2.5x body copy size = 40px */
-    line-height: 1.125;
+  h3 {
+    color: $color__dark-grey;
+
+    .section__link {
+      color: $color__black;
+      text-decoration: underline;
+    }
   }
-}
-
-@media (min-width: 56.25em) {
-  h1 {
-    font-size: 3em;
-    /* 3x body copy size = 48px */
-    line-height: 1.05;
-    /* keep to a multiple of the 20px line height and something more appropriate for display headings */
+  .footer-wrapper {
+    max-width: $width__max;
+    margin: auto;
+    padding-right: 20px;
+    padding-left: 20px;
   }
-}
-
-h2 {
-  font-size: 1.625em;
-  /* 1.625x body copy size = 26px */
-  line-height: 1.15384615;
-  /* 30px / 26px */
-}
-
-@media (min-width: 43.75em) {
-  h2 {
-    font-size: 2em;
-    /* 2x body copy size = 32px */
-    line-height: 1.25;
+  .footer-logo {
+    display: inline-block;
+    float: right;
+    margin-top: -1rem;
   }
-}
+  .horizontal-list {
+    font-weight: 500;
 
-@media (min-width: 56.25em) {
-  h2 {
-    font-size: 2.25em;
-    /* 2.25x body copy size = 36px */
-    line-height: 1.25;
+    .horizontal-list__header {
+      color: $color__dark-grey;
+    }
+    a {
+      color: $color__black;
+      border-bottom: 2px solid $color__black;
+      text-transform: uppercase;
+    }
   }
 }
 
 h3 {
-  font-size: 1.375em;
-  /* 1.375x body copy size = 22px */
-  line-height: 1.13636364;
-  /* 25px / 22px */
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 3rem;
 }
-
-@media (min-width: 43.75em) {
-  h3 {
-    font-size: 1.5em;
-    /* 1.5x body copy size = 24px */
-    line-height: 1.25;
+h1 {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.horizontal-list__header {
+  font-weight: 500;
+}
+.horizontal-list {
+  display: inline-block;
+  li {
+    display: inline-block;
+    margin-right: 2rem;
   }
 }
 
-@media (min-width: 56.25em) {
-  h3 {
-    font-size: 1.75em;
-    /* 1.75x body copy size = 28px */
-    line-height: 1.25;
+.content-container {
+  max-width: $width__max;
+  margin: auto;
+  padding-top: 4rem;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.hero {
+  margin-bottom: 2rem;
+
+  h1 {
+    color: $color__dark-grey;
+
+    .focus {
+      color: $color__black;
+    }
+  }
+  .hero__action {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    a {
+      color: $color__black;
+    }
   }
 }
 
-h4 {
-  font-size: 1.125em;
-  /* 1.125x body copy size = 18px */
-  line-height: 1.11111111;
-}
+.section__filter {
+  margin-bottom: 2rem;
 
-@media (min-width: 43.75em) {
-  h4 {
-    line-height: 1.22222222;
-    /* (22px / 18px */
+  .horizontal-list__header{
+    margin-right: 3rem;
+  }
+  .horizontal-list a {
+    color: $color__dark-grey;
+  }
+  .horizontal-list a.active {
+    color: $color__black;
+    border-bottom: 2px solid $color__black;
   }
 }
 
-blockquote {
-  font-size: 1.25em;
-  /* 20px / 16px */
-  line-height: 1.25;
-  /* 25px / 20px */
+.row {
+  @include container;
+  padding-right: 0;
+  padding-left: 0;
+
+  @include breakpoint($tablet){
+      padding: 40px 20px;
+  }
+  @include breakpoint($mobile){
+      padding: 40px 20px;
+  }
+  .column__left {
+   @include breakpoint($desktop){
+     @include col(4);
+   }
+   @include breakpoint($tablet){
+     @include span(4, true);
+   }
+   @include breakpoint($mobile){
+     @include span(12);
+   }
+  }
+  .column__right {
+   @include breakpoint($desktop){
+     @include col(8);
+   }
+   @include breakpoint($tablet){
+     @include span(8, true);
+   }
+   @include breakpoint($mobile){
+     @include span(12);
+   }
+  }
 }
 
-@media (min-width: 43.75em) {
-  blockquote {
-    font-size: 1.5em;
-    /* 24px / 16px = */
-    line-height: 1.45833333;
-    /* 35px / 24px */
+.section__invite {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+
+  a {
+    color: $color__black;
+    text-decoration: underline;
+  }
+
+  .column__right ul {
+    padding-top: 5rem;
+    font-weight: 600;
+
+    li:first-child {
+      color: $color__dark-grey;
+    }
   }
 }
