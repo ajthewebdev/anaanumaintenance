@@ -4,17 +4,20 @@ layout: default
 <div class="hero">
   <div class="hero__title">Anaanu Webstudio</div>
   <div class="hero__body animated slideInUp">
-    <h1>Is an independent creative studio, <a class="focus">we</a> build successful brands and handcraft websites that <a class="focus">make money</a>.</h1>
+    <h1>Is an independent creative studio, <a href="mailto:info@anaanu.site?subject=Let's work together" class="focus">we</a> build successful brands and handcraft websites that <a href="mailto:info@anaanu.site?subject=Let's work together" class="focus">make money</a>.</h1>
   </div>
-  <div class="hero__action"><a href="">Get in touch</a></div>
+  <div class="hero__action"><a href="mailto:info@anaanu.site?subject=Let's work together">Get in touch</a></div>
   <p>Interested in working with us? Our preferred mode of communication is email. We usually follow up and reply emails within 48 hours.</p>
 </div>
 
 <div class="section__filter">
   <span class="horizontal-list__header">Filter:</span>
   <ul class="horizontal-list">
-    <li><a href="" class="active">All</a></li>
-    <li><a href="">Uncategorized</a></li>
+    <li><a href="#" class="active">All</a></li>
+    {% assign categories = site.portfolio | group_by: "category" %}
+    {% for category in categories %}
+      <li><a href="#">{{ category.name }}</a></li>
+    {%endfor%}
   </ul>
 </div>
 
@@ -28,7 +31,11 @@ layout: default
     {% for post in site.portfolio %}
       <li>
         <a href="#" class="grid-item">
-          <img class="lazy animated slideInUp" data-src="{{ site.baseurl }}/{{ post.cover}}" alt="">
+          <div class="grid-item__info">
+            <h3>{{ post.title }}</h3>
+            <span>{{ post.action }}</span>
+          </div>
+          <img class="lazy animated slideInUp" data-src="{{ site.baseurl }}/{{ post.cover}}" alt="portfolio image">
         </a>
       </li>
     {% endfor %}
@@ -41,7 +48,7 @@ layout: default
     <div class="column__left"><h3>Work with us</a></h3></div>
     <div class="column__right">
       <p>
-        <a href="">Get in touch</a>, talk to us about your project, a potential partnership or collaboration.Our preferred mode of communication is email. We usually follow up initial contact within 48 hours.
+        <a href="mailto:info@anaanu.site?subject=Let's work together">Get in touch</a>, talk to us about your project, a potential partnership or collaboration.Our preferred mode of communication is email. We usually follow up initial contact within 48 hours.
       </p>
       <ul>
         <li>0233 577 553203</li>
