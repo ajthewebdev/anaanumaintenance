@@ -1,40 +1,20 @@
 # Basic
 name:               "Anaanu Webstudio"
-
-author:
-  facebook:         your-id
-  youtubeUser:      your-id
-  youtubeChannel:   your-id
-  twitter:          your-id
-  github:           your-id
-  stackoverflow:    your-id
-  quora:            your-id
-  linkedin:         your-id
-  pinterest:        your-id
-  googlePlus:       your-id
-  instagram:        your-id
-  reddit:           your-id
-  medium:           your-id
-  tumblr:           your-id
-  email:            your-id@your-email.com
-
+description: "Everything websites"
 copyright:
   year:             2017
   name:             Anaanu Webstudio
 
 # Google-analytics
 google-analytics:
-  id:               ""
+  id:               "UA-103582894-1"
 
 # Disqus
 disqus:
-  id:               ""
+  id:               "iamnii"
 
 # URL
 url:                "https://thesowah.github.io/anaanu.site/" # the base hostname & protocol for your site
-# url:                "http://localhost:4000" # use this url when you develop
-# baseurl:            "https://thesowah.github.io/anaanu.site" # the subpath of your site, e.g. /blog
-
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:           Africa/Accra
@@ -101,3 +81,9 @@ exclude:
   - "*.Rmd"
   - vendor
   - .travis.yml
+
+# Collections
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/

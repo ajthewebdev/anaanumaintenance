@@ -22,17 +22,25 @@ body {
 
 .header {
   background-color: $color__light-grey;
-  box-shadow: 0 -0.17em 0.75em 0 rgba(0,0,0,0.08) inset;
+  @include prefixer(box-shadow, 0 -0.17em 0.75em 0 rgba(0,0,0,0.08) inset);
 
   .header-wrapper {
     max-width: $width__max;
     margin: auto;
     padding-right: 20px;
     padding-left: 20px;
+
+    @include breakpoint($mobile) {
+      overflow: hidden;
+    }
   }
   .header-logo {
     padding-top: 2rem;
     padding-bottom: 2rem;
+
+    @include breakpoint($mobile) {
+      padding-top: 1rem;
+    }
   }
   .header-logo,
   .header-nav {
@@ -41,20 +49,53 @@ body {
   .header-nav {
     padding-top: 2rem;
     float: right;
+
+    @include breakpoint($mobile) {
+      margin-right: -3rem;
+    }
+
     a {
       color: $color__black;
-      margin-right: 2rem;
+      margin-right: 30px;
       font-weight: 500;
+
+      &:hover:after {
+        transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        transform: scale3d(1, 1, 1);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0px;
+        right: 0px;
+        height: 2px;
+        background-color: $color__light-green;
+        transform-origin: 0% 50%;
+        transform: scale3d(0, 1, 1);
+        transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
 
       &:focus,
       &:hover {
-        color: $color__light-green;
-        border-bottom: 2px solid $color__light-green;
+        color: $color__light-green !important;
+
+      }
+      @include breakpoint($mobile) {
+        display: block;
+        height: 2rem;
+        padding: 5px 0;
+        width: 100px;
       }
     }
     a.active {
       color: $color__dark-green;
       border-bottom: 2px solid $color__dark-green;
+
+      @include breakpoint($mobile) {
+        border-bottom: none;
+        border-right: 5px solid #008791;
+      }
     }
     a:last-child { margin-right: 0;}
   }
@@ -64,14 +105,35 @@ body {
   background-color: $color__light-grey;
   padding-bottom: 2rem;
   padding-top: 2rem;
-  box-shadow: 0 0.17em 0.75em 0 rgba(0,0,0,0.08) inset;
+  @include prefixer(box-shadow, 0px 11px 8px -10px #CCC inset);
 
   h3 {
     color: $color__dark-grey;
 
     .section__link {
       color: $color__black;
-      text-decoration: underline;
+      border-bottom: 2px solid;
+
+      &:hover,
+      &:focus {
+        color: $color__light-green !important;
+      }
+      &:hover:after {
+        transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        transform: scale3d(1, 1, 1);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0px;
+        right: 0px;
+        height: 2px;
+        background-color: $color__light-green;
+        transform-origin: 0% 50%;
+        transform: scale3d(0, 1, 1);
+        transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
     }
   }
   .footer-wrapper {
@@ -84,6 +146,11 @@ body {
     display: inline-block;
     float: right;
     margin-top: -1rem;
+
+    @include breakpoint($mobile) {
+      display: block;
+      margin-top: -3em;
+    }
   }
   .horizontal-list {
     font-weight: 500;
@@ -95,6 +162,27 @@ body {
       color: $color__black;
       border-bottom: 2px solid $color__black;
       text-transform: uppercase;
+
+      &:hover,
+      &:focus {
+        color: $color__light-green !important;
+      }
+      &:hover:after {
+        transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        transform: scale3d(1, 1, 1);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0px;
+        right: 0px;
+        height: 2px;
+        background-color: $color__light-green;
+        transform-origin: 0% 50%;
+        transform: scale3d(0, 1, 1);
+        transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
     }
   }
 }
@@ -114,9 +202,20 @@ h1 {
 }
 .horizontal-list {
   display: inline-block;
+
+  @include breakpoint($mobile) {
+    display: block;
+  }
+
   li {
     display: inline-block;
     margin-right: 2rem;
+
+    @include breakpoint($mobile) {
+      display: block;
+      margin-right: 0;
+      margin-top: 1rem;
+    }
   }
 }
 
@@ -126,25 +225,63 @@ h1 {
   padding-top: 4rem;
   padding-right: 20px;
   padding-left: 20px;
+  min-height: 500px;
+
+  @include breakpoint($mobile) {
+    background-color: $color__light-grey;
+  }
 }
 
 .hero {
   margin-bottom: 2rem;
 
-  h1 {
-    color: $color__dark-grey;
+  .hero__body{
+    h1 {
+      color: $color__dark-grey;
 
-    .focus {
-      color: $color__black;
+      &:hover .focus,
+      &:focus .focus{
+        color: $color__light-green !important;
+      }
+      &:hover .focus:after {
+        transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      .focus {
+        color: $color__black;
+      }
     }
   }
   .hero__action {
     font-size: 2em;
     font-weight: 600;
     margin-bottom: 1rem;
-    text-decoration: underline;
+
     a {
       color: $color__black;
+      position: relative;
+      transition: all .3s ease 0s;
+      border-bottom: 3px solid;
+
+      &:hover {
+        color: $color__light-green;
+      }
+      &:hover:after {
+        transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        transform: scale3d(1, 1, 1);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0px;
+        right: 0px;
+        height: 3px;
+        background-color: $color__light-green;
+        transform-origin: 0% 50%;
+        transform: scale3d(0, 1, 1);
+        transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
     }
   }
 }
@@ -157,6 +294,27 @@ h1 {
   }
   .horizontal-list a {
     color: $color__dark-grey;
+
+    &:hover,
+    &:focus {
+      color: $color__light-green !important;
+    }
+    &:hover:after {
+      transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0px;
+      right: 0px;
+      height: 2px;
+      background-color: $color__light-green;
+      transform-origin: 0% 50%;
+      transform: scale3d(0, 1, 1);
+      transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
   }
   .horizontal-list a.active {
     color: $color__black;
@@ -170,10 +328,10 @@ h1 {
   padding-left: 0;
 
   @include breakpoint($tablet){
-      padding: 40px 20px;
+    padding: 40px 0;
   }
   @include breakpoint($mobile){
-      padding: 40px 20px;
+    padding: 40px 0;
   }
   .column__left {
    @include breakpoint($desktop){
@@ -181,9 +339,13 @@ h1 {
    }
    @include breakpoint($tablet){
      @include span(4, true);
+     padding-right: 0;
+     padding-left: 0;
    }
    @include breakpoint($mobile){
      @include span(12);
+     padding-right: 0;
+     padding-left: 0;
    }
   }
   .column__right {
@@ -192,9 +354,13 @@ h1 {
    }
    @include breakpoint($tablet){
      @include span(8, true);
+     padding-right: 0;
+     padding-left: 0;
    }
    @include breakpoint($mobile){
      @include span(12);
+     padding-right: 0;
+     padding-left: 0;
    }
   }
 }
@@ -205,7 +371,27 @@ h1 {
 
   a {
     color: $color__black;
-    text-decoration: underline;
+    border-bottom: 1px solid;
+    &:hover,
+    &:focus {
+      color: $color__light-green !important;
+    }
+    &:hover:after {
+      transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0px;
+      right: 0px;
+      height: 1px;
+      background-color: $color__light-green;
+      transform-origin: 0% 50%;
+      transform: scale3d(0, 1, 1);
+      transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
   }
 
   .column__right ul {
@@ -217,3 +403,38 @@ h1 {
     }
   }
 }
+
+.page {
+  padding-bottom: 5rem;
+}
+
+a {
+  color: $color__black;
+  position: relative;
+  transition: all .3s ease 0s;
+}
+
+.grid-wrapper {
+  clear: both;
+  margin: 0 auto;
+  padding: 0;
+  max-width: $width__max;
+
+  .grid {
+    margin: 30px auto;
+    padding: 0;
+    min-height: 500px;
+
+    .grid-item {
+      padding: 5px;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+img.lazy {
+    display: block;
+}
+

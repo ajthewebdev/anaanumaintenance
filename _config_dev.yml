@@ -21,7 +21,7 @@ nav:
   - name:           "Studio"
     url:            "/"
   - name:           "Blog"
-    url:            "/archive"
+    url:            "/archive/"
   # - name:           "About"
   #   url:            "/tags"
   # - name:           "Contact"
@@ -62,3 +62,9 @@ exclude:
   - "*.Rmd"
   - vendor
   - .travis.yml
+
+# Collections
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/

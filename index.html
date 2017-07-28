@@ -3,8 +3,8 @@ layout: default
 ---
 <div class="hero">
   <div class="hero__title">Anaanu Webstudio</div>
-  <div class="hero__body">
-    <h1>Is an independent creative studio, <span class="focus">we</span> build successful brands and handcraft websites that <span class="focus">make money</span>.</h1>
+  <div class="hero__body animated slideInUp">
+    <h1>Is an independent creative studio, <a class="focus">we</a> build successful brands and handcraft websites that <a class="focus">make money</a>.</h1>
   </div>
   <div class="hero__action"><a href="">Get in touch</a></div>
   <p>Interested in working with us? Our preferred mode of communication is email. We usually follow up and reply emails within 48 hours.</p>
@@ -19,7 +19,21 @@ layout: default
 </div>
 
 <div class="grid-wrapper">
-  <ul class="grid"></ul>
+  <ul class="grid effect-4" id="grid">
+    {% if site.portfolio.size == 0 %}
+    <li>
+      <h2>No portfolio items found</h2>
+    </li>
+    {% else %}
+    {% for post in site.portfolio %}
+      <li>
+        <a href="#" class="grid-item">
+          <img class="lazy animated slideInUp" data-src="{{ site.baseurl }}/{{ post.cover}}" alt="">
+        </a>
+      </li>
+    {% endfor %}
+    {% endif %}
+  </ul>
 </div>
 
 <div class="section__invite">
