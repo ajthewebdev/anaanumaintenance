@@ -34,7 +34,7 @@ nav:
   - name:           "Studio"
     url:            "/"
   - name:           "Blog"
-    url:            "/archive"
+    url:            "/archive/"
   # - name:           "About"
   #   url:            "/tags"
   # - name:           "Contact"

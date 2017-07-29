@@ -105,7 +105,7 @@ body {
   background-color: $color__light-grey;
   padding-bottom: 2rem;
   padding-top: 2rem;
-  @include prefixer(box-shadow, 0px 11px 8px -10px #CCC inset);
+  @include prefixer(box-shadow, 0 2px 5px 0 rgba(0,0,0,.26) inset);
 
   h3 {
     color: $color__dark-grey;

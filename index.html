@@ -12,17 +12,17 @@ layout: default
 
 <div class="section__filter">
   <span class="horizontal-list__header">Filter:</span>
-  <ul class="horizontal-list">
-    <li><a href="#" class="active">All</a></li>
+  <ul class="horizontal-list button-group filter-button-group">
+    <li><a class="button active" data-filter="*">All</a></li>
     {% assign categories = site.portfolio | group_by: "category" %}
     {% for category in categories %}
-      <li><a href="#">{{ category.name }}</a></li>
+      <li><a class="button" data-filter=".{{ category.name }}">{{ category.name }}</a></li>
     {%endfor%}
   </ul>
 </div>
 
 <div class="grid-wrapper">
-  <ul class="grid effect-4" id="grid">
+  <ul class="grid" id="grid">
     {% if site.portfolio.size == 0 %}
     <li>
       <h2>No portfolio items found</h2>
@@ -30,7 +30,7 @@ layout: default
     {% else %}
     {% for post in site.portfolio %}
       <li>
-        <a href="#" class="grid-item">
+        <a href="#" class="grid-item {{ post.category }}">
           <div class="grid-item__info">
             <h3>{{ post.title }}</h3>
             <span>{{ post.action }}</span>
