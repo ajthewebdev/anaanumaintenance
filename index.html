@@ -2,23 +2,33 @@
 layout: default
 ---
 <div class="hero">
-  <div class="hero__title">Anaanu Webstudio</div>
-  <div class="hero__body animated slideInUp">
-    <h1>Is an independent creative studio, <a href="mailto:info@anaanu.site?subject=Let's work together" class="focus">we</a> build successful brands and handcraft websites that <a href="mailto:info@anaanu.site?subject=Let's work together" class="focus">make money</a>.</h1>
+  <div class="hero__title block__container">
+    <div class="block__content">Anaanu Webstudio</div>
+    <div class="block__reveal"></div>
+  </div>
+  <div class="hero__body block__container">
+    <h1 class="block__content">Is an independent creative studio, <a href="mailto:info@anaanu.site?subject=Let's work together" class="focus">we</a> build successful brands and handcraft websites that <a href="mailto:info@anaanu.site?subject=Let's work together" class="focus">make money</a>.</h1>
+    <div class="block__reveal"></div>
   </div>
   <div class="hero__action"><a href="mailto:info@anaanu.site?subject=Let's work together">Get in touch</a></div>
-  <p>Interested in working with us? Our preferred mode of communication is email. We usually follow up and reply emails within 48 hours.</p>
+  <div class="block__container">
+    <p class="block__content">Interested in working with us? Our preferred mode of communication is email. We usually follow up and reply emails within 48 hours.</p>
+    <div class="block__reveal"></div>
+  </div>
 </div>
 
-<div class="section__filter">
-  <span class="horizontal-list__header">Filter:</span>
-  <ul class="horizontal-list button-group filter-button-group">
+<div class="section__filter block__container">
+  <span class="horizontal-list__header block__content">Filter:
+    <div class="block__reveal"></div>
+  </span>
+  <ul class="horizontal-list button-group filter-button-group block__content">
     <li><a class="button active" data-filter="*">All</a></li>
     {% assign categories = site.portfolio | group_by: "category" %}
     {% for category in categories %}
       <li><a class="button" data-filter=".{{ category.name }}">{{ category.name }}</a></li>
     {%endfor%}
   </ul>
+  <div class="block__reveal"></div>
 </div>
 
 <div class="grid-wrapper">
@@ -30,13 +40,16 @@ layout: default
     {% else %}
     {% for post in site.portfolio %}
       <li>
-        <a href="#" class="grid-item {{ post.category }}">
-          <div class="grid-item__info">
-            <h3>{{ post.title }}</h3>
-            <span>{{ post.action }}</span>
-          </div>
-          <img class="lazy animated slideInUp" src="{{ site.baseurl }}/{{ post.cover}}" alt="portfolio image">
-        </a>
+        <div class="grid-item {{ post.category }}">
+          <a href="" class="block__container">
+            <div class="grid-item__info">
+              <h3>{{ post.title }}</h3>
+              <span>{{ post.action }}</span>
+            </div>
+            <img class="lazy block__content" src="" data-src="{{ site.baseurl }}/{{ post.cover}}" alt="portfolio image">
+            <div class="block__reveal"></div>
+          </a>
+        </div>
       </li>
     {% endfor %}
     {% endif %}
@@ -45,15 +58,24 @@ layout: default
 
 <div class="section__invite">
   <div class="row">
-    <div class="column__left"><h3>Work with us</a></h3></div>
+    <div class="column__left block__container">
+      <h3 class="block__content">Work with us</a></h3>
+      <div class="block__reveal"></div>
+    </div>
     <div class="column__right">
-      <p>
-        <a href="mailto:info@anaanu.site?subject=Let's work together">Get in touch</a>, talk to us about your project, a potential partnership or collaboration.Our preferred mode of communication is email. We usually follow up initial contact within 48 hours.
-      </p>
-      <ul>
-        <li>0233 577 553203</li>
-        <li>info@anaanu.site</li>
-      </ul>
+      <div class="block__container">
+        <p class="block__content">
+          <a href="mailto:info@anaanu.site?subject=Let's work together">Get in touch</a>, talk to us about your project, a potential partnership or collaboration.Our preferred mode of communication is email. We usually follow up initial contact within 48 hours.
+        </p>
+        <div class="block__reveal"></div>
+      </div>
+      <div class="block__container">
+        <ul class="block__content">
+          <li>0233 577 553203</li>
+          <li>info@anaanu.site</li>
+        </ul>
+        <div class="block__reveal"></div>
+      </div>
     </div>
   </div>
 </div>
