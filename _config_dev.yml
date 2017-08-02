@@ -1,6 +1,7 @@
 # Basic
 name:               "Anaanu Webstudio"
-description: "Everything websites"
+tagline: "Everything websites"
+description: "A creative studio that helps people build effective websites."
 
 # URL
 url:                "http://localhost:4000" # use this url when you develop
@@ -22,8 +23,8 @@ nav:
     url:            "/"
   - name:           "Blog"
     url:            "/archive/"
-  # - name:           "About"
-  #   url:            "/tags"
+  - name:           "Info"
+    url:            "#"
   # - name:           "Contact"
   #   url:            "#"
 

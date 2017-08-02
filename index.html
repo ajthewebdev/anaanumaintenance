@@ -1,38 +1,51 @@
 ---
 layout: default
 ---
-<div class="hero">
-  <div class="hero__title block__container">
-    <div class="block__content">Anaanu Webstudio</div>
-    <div class="block__reveal"></div>
+
+<div class="row" id="hero">
+  <div class="column__left">
+    <div class="block__container" id="ani-1">
+      <h1 class="brand block__content">Anaanu Webstudio</h1>
+      <div class="block__reveal"></div>
+    </div>
   </div>
-  <div class="hero__body block__container">
-    <h1 class="block__content">Is an independent creative studio, <a href="mailto:info@anaanu.site?subject=Let's work together" class="focus">we</a> build successful brands and handcraft websites that <a href="mailto:info@anaanu.site?subject=Let's work together" class="focus">make money</a>.</h1>
-    <div class="block__reveal"></div>
+  <div class="column__right">
+    <div class="block__container" id="ani-2">
+      <h1 class="block__content">A creative studio that helps people build effective websites.</h1>
+      <div class="block__reveal"></div>
+    </div>
+    <div class="block__container" id="ani-3">
+      <h1 class="muted block__content">We plan, design and build websites for brands.</h1>
+      <div class="block__reveal"></div>
+    </div>
+    <div class="block__container" id="ani-4">
+      <p class="block__content">Talk to us about your project, a potential partnership or collaboration.</p>
+      <div class="block__reveal"></div>
+    </div>
+    <div class="block__container" id="ani-5">
+      <a class="block__content" href="">Get in touch</a>
+      <div class="block__reveal"></div>
+    </div>
   </div>
-  <div class="hero__action"><a href="mailto:info@anaanu.site?subject=Let's work together">Get in touch</a></div>
-  <div class="block__container">
-    <p class="block__content">Interested in working with us? Our preferred mode of communication is email. We usually follow up and reply emails within 48 hours.</p>
+</div>
+
+<div class="row" id="projects-filter">
+  <div class="block__container" id="ani-6">
+    <h2 class="brand block__content">Selected Projects</h2>
+    <ul class="filter-button-group block__content">
+      <li><a class="button active" data-filter="*">All</a></li>
+      {% assign categories = site.portfolio | group_by: "category" %}
+      {% for category in categories %}
+        <li><a class="button" data-filter=".{{ category.name }}">{{ category.name }}</a></li>
+      {%endfor%}
+    </ul>
     <div class="block__reveal"></div>
   </div>
 </div>
 
-<div class="section__filter block__container">
-  <span class="horizontal-list__header block__content">Filter:
-    <div class="block__reveal"></div>
-  </span>
-  <ul class="horizontal-list button-group filter-button-group block__content">
-    <li><a class="button active" data-filter="*">All</a></li>
-    {% assign categories = site.portfolio | group_by: "category" %}
-    {% for category in categories %}
-      <li><a class="button" data-filter=".{{ category.name }}">{{ category.name }}</a></li>
-    {%endfor%}
-  </ul>
-  <div class="block__reveal"></div>
-</div>
-
-<div class="grid-wrapper">
+<div class="grid-wrapper" id="projects">
   <ul class="grid" id="grid">
+    <li><div class="grid-sizer"></div></li>
     {% if site.portfolio.size == 0 %}
     <li>
       <h2>No portfolio items found</h2>
@@ -42,40 +55,11 @@ layout: default
       <li>
         <div class="grid-item {{ post.category }}">
           <a href="" class="block__container">
-            <div class="grid-item__info">
-              <h3>{{ post.title }}</h3>
-              <span>{{ post.action }}</span>
-            </div>
-            <img class="lazy block__content" src="" data-src="{{ site.baseurl }}/{{ post.cover}}" alt="portfolio image">
-            <div class="block__reveal"></div>
+            <img class="lazy" src="" data-src="{{ site.baseurl }}/{{ post.cover}}" alt="portfolio image">
           </a>
         </div>
       </li>
     {% endfor %}
     {% endif %}
   </ul>
-</div>
-
-<div class="section__invite">
-  <div class="row">
-    <div class="column__left block__container">
-      <h3 class="block__content">Work with us</a></h3>
-      <div class="block__reveal"></div>
-    </div>
-    <div class="column__right">
-      <div class="block__container">
-        <p class="block__content">
-          <a href="mailto:info@anaanu.site?subject=Let's work together">Get in touch</a>, talk to us about your project, a potential partnership or collaboration.Our preferred mode of communication is email. We usually follow up initial contact within 48 hours.
-        </p>
-        <div class="block__reveal"></div>
-      </div>
-      <div class="block__container">
-        <ul class="block__content">
-          <li>0233 577 553203</li>
-          <li>info@anaanu.site</li>
-        </ul>
-        <div class="block__reveal"></div>
-      </div>
-    </div>
-  </div>
 </div>
