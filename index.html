@@ -8,11 +8,13 @@ layout: default
       <h1 class="brand block__content">Anaanu Webstudio</h1>
       <div class="block__reveal"></div>
     </div>
-   <!--  <div class="ig-recent-feed">
-      <div id="box"></div>
-      <div id="box"></div>
-      <p><span class="ig-handle muted">@anaanuwebstudio</span></p>
-    </div> -->
+    <p class="muted">@anaanuwebstudio</p>
+    <div class="carousel">
+      <div class="carousel-wrapper">
+        <div class="slide">1</div>
+        <div class="slide">2</div>
+      </div>
+    </div>
   </div>
   <div class="column__right">
     <div class="block__container" id="ani-2">
@@ -38,6 +40,7 @@ layout: default
   <div class="block__container" id="ani-6">
     <h2 class="brand block__content">Selected Projects</h2>
     <ul class="filter-button-group block__content">
+      <li>Filter case studies by:</li>
       <li><a class="button active" data-filter="*">All</a></li>
       {% assign categories = site.portfolio | group_by: "category" %}
       {% for category in categories %}
@@ -67,4 +70,11 @@ layout: default
     {% endfor %}
     {% endif %}
   </ul>
+</div>
+
+<div class="laucher-wrapper">
+  <div class="block__container">
+    Let's create great products together.
+    <h3><a href="">Start a project</a></h3>
+  </div>
 </div>

@@ -32,7 +32,7 @@ h5,
 h6 {
   font-family: 'Poppins', sans-serif;
   letter-spacing: -1px;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 //--  links
@@ -205,7 +205,7 @@ img.lazy {
   .grid {
     margin: 30px auto;
     padding: 0;
-    min-height: 500px;
+    min-height: 350px;
 
     .grid-item {
       display: block;
@@ -222,7 +222,7 @@ img.lazy {
     }
 
     img {
-      height: 100%;
+      height: auto;
       width: 100%;
     }
   }
@@ -237,6 +237,9 @@ img.lazy {
 
   ul {
     li { padding-top: 0.25rem; }
+    li:nth-child(3) {
+      font-weight: 500;
+    }
   }
 
   .footer__bottom {
@@ -304,10 +307,22 @@ img.lazy {
     pointer-events: none;
   }
 }
-
-#box {
-  border: 1px solid $color__dark-green;
-  height: 250px;
-  width: 250px;
-  opacity: 0.3;
+.carousel {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  margin-left: -36vw;
+  padding-right: 1.7rem;
+  .carousel-wrapper {
+    flex-direction: row;
+    display: flex;
+    flex-direction: row-reverse;
+    .slide {
+      background-color: $color__dark-green;
+      height: 250px;
+      width: 250px;
+      float: left;
+      margin-left: 1rem;
+    }
+  }
 }
