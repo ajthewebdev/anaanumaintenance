@@ -7,6 +7,15 @@ $color__black: #3e3e3e;
 $width__max: 47rem;
 
 // general
+html,
+body,
+input,
+button,
+textarea {
+  -webkit-font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 19px;
@@ -294,4 +303,11 @@ img.lazy {
     height: 100%;
     pointer-events: none;
   }
+}
+
+#box {
+  border: 1px solid $color__dark-green;
+  height: 250px;
+  width: 250px;
+  opacity: 0.3;
 }
