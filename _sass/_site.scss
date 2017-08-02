@@ -59,27 +59,25 @@ ul {
    }
    @include breakpoint($tablet){
      @include span(5, true);
-     padding-right: 0;
-     padding-left: 0;
    }
    @include breakpoint($mobile){
      @include span(12);
    }
+   padding-right: 0 !important;
+   padding-left: 0 !important;
   }
   .column__right {
-    padding-right: 0;
-    padding-left: 0;
    @include breakpoint($desktop){
      @include col(7);
    }
    @include breakpoint($tablet){
      @include span(7, true);
-     padding-right: 0;
-     padding-left: 0;
    }
    @include breakpoint($mobile){
      @include span(12);
    }
+   padding-right: 0 !important;
+   padding-left: 0 !important;
   }
 }
 // -- buttons
