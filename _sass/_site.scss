@@ -4,7 +4,7 @@ $color__dark-green: #008791;
 $color__light-grey: #f7f7f7;
 $color__dark-grey: #787a7f;
 $color__black: #3e3e3e;
-$width__max: 1024px;
+$width__max: 47rem;
 
 // general
 body {
@@ -54,35 +54,31 @@ ul {
     padding: 40px 0;
   }
   .column__left {
-    vertical-align: top !important;
    @include breakpoint($desktop){
      @include col(5);
    }
    @include breakpoint($tablet){
      @include span(5, true);
-   }
-   @include breakpoint($mobile){
-     @include span(12);
      padding-right: 0;
      padding-left: 0;
    }
-
-   h2 {
-    margin-bottom: 1rem;
+   @include breakpoint($mobile){
+     @include span(12);
    }
   }
   .column__right {
+    padding-right: 0;
+    padding-left: 0;
    @include breakpoint($desktop){
      @include col(7);
    }
    @include breakpoint($tablet){
      @include span(7, true);
+     padding-right: 0;
+     padding-left: 0;
    }
    @include breakpoint($mobile){
      @include span(12);
-
-     padding-right: 0;
-     padding-left: 0;
    }
   }
 }

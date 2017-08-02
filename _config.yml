@@ -35,8 +35,8 @@ kramdown:
 nav:
   - name:           "Studio"
     url:            "/"
-  - name:           "Blog"
-    url:            "/archive/"
+  # - name:           "Blog"
+  #   url:            "/archive/"
   # - name:           "About"
   #   url:            "/tags"
   # - name:           "Contact"
