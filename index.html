@@ -64,7 +64,8 @@ layout: default
         <div class="grid-item {{ post.category | slugify: 'pretty' }}">
           <a href="{{ post.url | prepend: site.baseurl }}" class="block__container">
             <div class="image-caption">
-              <h3>{{ post.shortname }}</h3>
+              <p>{{ post.service }}</p>
+              <h2>{{ post.shortname }}</h2>
             </div>
             <img class="lazy hide-on-mobile" src="{{ site.baseurl }}/{{ post.cover }}" data-src="{{ site.baseurl }}/{{ post.cover}}" alt="portfolio image">
             <img class="lazy hide-on-desktop" src="{{ site.baseurl }}/{{ post.thumbnail }}" data-src="{{ site.baseurl }}/{{ post.thumbnail}}" alt="portfolio image">

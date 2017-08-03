@@ -341,3 +341,13 @@ img.lazy {
     }
   }
 }
+
+.image-caption {
+  p,
+  h2 {
+    position: absolute;
+    padding: 2em 1.2rem;
+    text-decoration: none;
+    color: #fff;
+  }
+}
