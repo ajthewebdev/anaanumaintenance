@@ -62,8 +62,9 @@ layout: default
     {% for post in site.portfolio %}
       <li>
         <div class="grid-item {{ post.category | slugify: 'pretty' }}">
-          <a href="" class="block__container">
-            <img class="lazy" src="{{ site.baseurl }}/{{ post.cover}}" data-src="{{ site.baseurl }}/{{ post.cover}}" alt="portfolio image">
+          <a href="{{ post.url | prepend: site.baseurl }}" class="block__container">
+            <img class="lazy hide-on-mobile" src="{{ site.baseurl }}/{{ post.cover }}" data-src="{{ site.baseurl }}/{{ post.cover}}" alt="portfolio image">
+            <img class="lazy hide-on-desktop" src="{{ site.baseurl }}/{{ post.thumbnail }}" data-src="{{ site.baseurl }}/{{ post.thumbnail}}" alt="portfolio image">
           </a>
         </div>
       </li>

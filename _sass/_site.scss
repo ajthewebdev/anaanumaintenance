@@ -7,6 +7,20 @@ $color__black: #3e3e3e;
 $width__max: 47rem;
 
 // general
+.hide-on-mobile {
+  @include breakpoint($mobile){
+    display: none !important;
+  }
+}
+.hide-on-desktop {
+  @include breakpoint($desktop){
+    display: none !important;
+  }
+  @include breakpoint($tablet){
+    display: none !important;
+  }
+}
+
 html,
 body,
 input,
@@ -307,6 +321,7 @@ img.lazy {
     pointer-events: none;
   }
 }
+// carousel scaffolds
 .carousel {
   display: none;
   position: relative;
