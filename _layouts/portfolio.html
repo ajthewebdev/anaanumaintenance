@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<header class="row" id="post-header">
+  <div class="column__left">
+  <p>
+    <span>{{ page.service }}</span>
+    <h1 class="post-title">{{ page.shortname }}</h1>
+    </p>
+  </div>
+  <div class="column__right">
+  <p class="muted">
+    We built a brochure website for Expat Gh Relocation Services Ltd. a local concierge startup in the Real Estate industry.
+  </p>
+<!--     <ul class="muted">
+      <li>Posted
+        <span class="post-date">
+          <time>{{ page.date | date_to_string }}</time>
+        </span>
+      </li>
+      <li>From {{ page.life }}</li>
+      <li>{{ page.industry }} Industry</li>
+    </ul> -->
+  </div>
+</header>
+
+<div class="post">
+  {{ content }}
+
+  <h3>Related projects</h3>
+  <!-- Disqus -->
+  {% if page.comments != false and site.disqus.id %}
+  <div class="post-disqus">
+      <section id="disqus_thread"></section>
+      {% include disqus.html %}
+  </div>
+  {% endif %}
+
+</div>

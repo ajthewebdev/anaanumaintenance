@@ -232,6 +232,31 @@ img.lazy {
 
       img {
         // opacity: 1;
+
+      }
+
+      .image-caption {
+        opacity: 0;
+        transform: translate3d(-1rem,0,0);
+        transition: opacity 0.35s, transform 0.35s;
+        position: relative;
+        z-index: 1;
+        p,
+        h2 {
+          position: absolute;
+          padding: 2em 1.2rem;
+          text-decoration: none;
+          color: #fff;
+        }
+
+      }
+      a:hover img {
+        filter: blur(2px);
+        z-index: -1;
+      }
+      a:hover .image-caption {
+        opacity: 1;
+        transform: translate3d(0,0,0);
       }
     }
 
@@ -342,12 +367,12 @@ img.lazy {
   }
 }
 
-.image-caption {
-  p,
-  h2 {
-    position: absolute;
-    padding: 2em 1.2rem;
-    text-decoration: none;
-    color: #fff;
+
+.post-title {
+  margin-top: 0.75rem;
+}
+#post-header {
+  .column__right ul {
+    float: right;
   }
 }
