@@ -6,11 +6,10 @@ layout: default
   <p>
     <span>{{ page.service }}</span>
     <h1 class="post-title">{{ page.shortname }}</h1>
-    </p>
   </div>
   <div class="column__right">
   <p class="muted">
-    We built a brochure website for Expat Gh Relocation Services Ltd. a local concierge startup in the Real Estate industry.
+    {{ page.description }}
   </p>
 <!--     <ul class="muted">
       <li>Posted
@@ -27,7 +26,7 @@ layout: default
 <div class="post">
   {{ content }}
 
-  <h3>Related projects</h3>
+  <!-- <h3>Related projects</h3> -->
   <!-- Disqus -->
   {% if page.comments != false and site.disqus.id %}
   <div class="post-disqus">

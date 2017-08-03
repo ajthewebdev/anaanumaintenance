@@ -208,6 +208,11 @@ img.lazy {
   @include breakpoint($mobile) {
     background-color: $color__light-grey;
   }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .grid-wrapper {
@@ -348,11 +353,11 @@ img.lazy {
 }
 // carousel scaffolds
 .carousel {
-  display: none;
+  display: block;
   position: relative;
   overflow: hidden;
   margin-left: -36vw;
-  padding-right: 1.7rem;
+  padding-right: 3rem;
   .carousel-wrapper {
     flex-direction: row;
     display: flex;

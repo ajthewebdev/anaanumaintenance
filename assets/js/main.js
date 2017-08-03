@@ -124,6 +124,11 @@ $(function() {
         delay: anime.random(0, 1000)
       }
     });
+    var animate__7 = new BlockReveal('#ani-7', {
+      options: {
+        delay: anime.random(0, 1000)
+      }
+    });
   }
 
   ////////////////////////////////////////////////////////////
@@ -139,7 +144,8 @@ $(function() {
         delay: anime.random(0, 200)
       }
     });
-    watcher_1.destroy();
+    // watcher_1.one();
   });
+  watcher_1.destroy();
 });
 
