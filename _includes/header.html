@@ -12,7 +12,7 @@
           <a href="{{ nav.url }}">{{ nav.name }}</a>
         {% else %}
           <a href="{{ nav.url | prepend: site.baseurl }}"
-          {% if page.url == nav.url %}class='active'{% endif %}>
+          {% if page.url contains nav.url %}class='active'{% endif %}>
             {{ nav.name }}
           </a>
         {% endif %}

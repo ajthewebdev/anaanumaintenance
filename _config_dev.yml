@@ -4,9 +4,9 @@ tagline: "Everything websites"
 description: "A creative studio that helps people build effective websites."
 
 # URL
-url:                "http://localhost:4000" # use this url when you develop
+url:                "http://localhost:4000"
 timezone:           Africa/Accra
-permalink:          /:year-:month-:day/:title/
+permalink:          /blog/:year-:month-:day/:title/
 
 # Pagination
 paginate:           5
@@ -22,11 +22,9 @@ nav:
   - name:           "Studio"
     url:            "/"
   - name:           "Blog"
-    url:            "/archive/"
+    url:            "/blog/"
   - name:           "Info"
     url:            "#"
-  # - name:           "Contact"
-  #   url:            "#"
 
 # Sass
 sass:
@@ -68,8 +66,8 @@ exclude:
 collections:
   portfolio:
     output: true
-    permalink: /portfolio/:path/
+    permalink: /blog/:path/
 
 # Disqus
 disqus:
-  id:               "iamnii"
+  id:               "anaanuwebstudio"

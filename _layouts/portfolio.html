@@ -28,9 +28,10 @@ layout: default
 
   <!-- <h3>Related projects</h3> -->
   <!-- Disqus -->
-  {% if page.comments != false and site.disqus.id %}
+  {% if page.comments and site.disqus.id %}
+  <hr>
   <div class="post-disqus">
-      <section id="disqus_thread"></section>
+    <h3>Comments</h3>
       {% include disqus.html %}
   </div>
   {% endif %}

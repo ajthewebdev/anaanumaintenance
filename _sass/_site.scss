@@ -20,7 +20,9 @@ $width__max: 47rem;
     display: none !important;
   }
 }
-
+hr {
+  border: 1px solid $color__dark-green;
+}
 html,
 body,
 input,
