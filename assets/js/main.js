@@ -95,41 +95,36 @@ $(function() {
       });
   };
 
-  // Fake loading.
-  setTimeout(init, 1000);
-
-  function init() {
-    var animate__1 = new BlockReveal('#ani-1', {
-      options: {
-        delay: anime.random(0, 1000)
-      }
-    });
-    var animate__2 = new BlockReveal('#ani-2', {
-      options: {
-        delay: anime.random(0, 1000)
-      }
-    });
-    var animate__3 = new BlockReveal('#ani-3', {
-      options: {
-        delay: anime.random(0, 1000)
-      }
-    });
-    var animate__4 = new BlockReveal('#ani-4', {
-      options: {
-        delay: anime.random(0, 1000)
-      }
-    });
-    var animate__5 = new BlockReveal('#ani-5', {
-      options: {
-        delay: anime.random(0, 1000)
-      }
-    });
-    var animate__7 = new BlockReveal('#ani-7', {
-      options: {
-        delay: anime.random(0, 1000)
-      }
-    });
-  }
+  var animate__1 = new BlockReveal('#ani-1', {
+    options: {
+      delay: anime.random(0, 1000)
+    }
+  });
+  var animate__2 = new BlockReveal('#ani-2', {
+    options: {
+      delay: anime.random(0, 1000)
+    }
+  });
+  var animate__3 = new BlockReveal('#ani-3', {
+    options: {
+      delay: anime.random(0, 1000)
+    }
+  });
+  var animate__4 = new BlockReveal('#ani-4', {
+    options: {
+      delay: anime.random(0, 1000)
+    }
+  });
+  var animate__5 = new BlockReveal('#ani-5', {
+    options: {
+      delay: anime.random(0, 1000)
+    }
+  });
+  var animate__7 = new BlockReveal('#ani-7', {
+    options: {
+      delay: anime.random(0, 1000)
+    }
+  });
 
   ////////////////////////////////////////////////////////////
   //// ScrollMonitor                                   ///////
@@ -138,14 +133,13 @@ $(function() {
   var watcher_1 = scrollMonitor.create( $('#projects-filter'));
 
   watcher_1.fullyEnterViewport(function() {
-    // console.log( 'I have entered the viewport' );
+    console.log( 'I have entered the viewport' );
     var animate__6 = new BlockReveal('#ani-6', {
       options: {
-        delay: anime.random(0, 200)
+        delay: anime.random(0, 450)
       }
     });
-    // watcher_1.one();
+    watcher_1.destroy();
   });
-  watcher_1.destroy();
 });
 
