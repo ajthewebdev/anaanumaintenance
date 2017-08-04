@@ -283,6 +283,8 @@ img.lazy {
 
   ul {
     li { padding-top: 0.25rem; }
+  }
+  ul:not(.block__social-links) {
     li:nth-child(3) {
       font-weight: 500;
     }
@@ -299,6 +301,7 @@ img.lazy {
       li:not(:first-child){
         display: inline-block;
         margin-right: 30px;
+        font-weight: 500;
       }
 
       @include breakpoint($mobile) {
@@ -381,5 +384,13 @@ img.lazy {
 #post-header {
   .column__right ul {
     float: right;
+  }
+}
+
+#hero {
+  .hero-btn {
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: -1px;
   }
 }

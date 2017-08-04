@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div class="row" id="hero">
   <div class="column__left">
     <div class="block__container" id="ani-1">
@@ -34,7 +33,7 @@ layout: default
       <div class="block__reveal"></div>
     </div>
     <div class="block__container" id="ani-5">
-      <a class="block__content" href="">Get in touch</a>
+      <a href="" class="block__content hero-btn">Get in touch</a>
       <div class="block__reveal"></div>
     </div>
   </div>
@@ -89,7 +88,7 @@ layout: default
 </div>
 
 <div class="row">
-  <h2>Featured blog posts</h2>
+  <h2>Featured posts</h2>
   {% assign featured_posts = (site.posts | where:"featured","true") %}
   {% if featured_posts.size == 0 %}
     <h3>No featured post</h3>
