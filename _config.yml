@@ -11,16 +11,11 @@ copyright:
 google-analytics:
   id:               "UA-103582894-1"
 
-# Disqus
-disqus:
-  id:               "iamnii"
-
 # URL
 url:                "https://thesowah.github.io/anaanu.site/" # the base hostname & protocol for your site
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:           Africa/Accra
-permalink:          /:year-:month-:day/:title/
+permalink:          /blog/:year-:month-:day/:title/
 
 # Pagination
 paginate:           5
@@ -34,13 +29,10 @@ kramdown:
 # Navigation
 nav:
   - name:           "Studio"
-    url:            "/"
-  # - name:           "Blog"
-  #   url:            "/archive/"
-  # - name:           "About"
-  #   url:            "/tags"
-  # - name:           "Contact"
-  #   url:            "#"
+    url:            "/index/"
+  - name:           "Blog"
+    url:            "/blog/"
+
 
 # Sass
 sass:
@@ -88,4 +80,12 @@ exclude:
 collections:
   portfolio:
     output: true
-    permalink: /portfolio/:path/
+    permalink: /blog/:path/
+
+# Disqus
+disqus:
+  id:               "anaanuwebstudio"
+
+owner:
+  mailto:           "mailto:info@anaanu.site?subject=Let's work together"
+
