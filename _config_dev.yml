@@ -20,7 +20,7 @@ kramdown:
 # Navigation
 nav:
   - name:           "Studio"
-    url:            "/index/"
+    url:            "/"
   - name:           "Blog"
     url:            "/blog/"
   - name:           "Info"
