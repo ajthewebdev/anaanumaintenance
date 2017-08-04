@@ -71,3 +71,6 @@ collections:
 # Disqus
 disqus:
   id:               "anaanuwebstudio"
+
+owner:
+  mailto:           "mailto:info@anaanu.site?subject=Let's work together"

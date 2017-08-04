@@ -6,23 +6,15 @@ layout: default
   <p>
     <span>{{ page.service }}</span>
     <h1 class="post-title">{{ page.shortname }}</h1>
+    <p class="muted">
+      <span class="post-date">
+        <time>{{ page.date | date_to_string }}</time>
+      </span>
+    </p>
   </div>
-  <div class="column__right">
-  <p class="muted">
-    {{ page.description }}
-  </p>
-<!--     <ul class="muted">
-      <li>Posted
-        <span class="post-date">
-          <time>{{ page.date | date_to_string }}</time>
-        </span>
-      </li>
-      <li>From {{ page.life }}</li>
-      <li>{{ page.industry }} Industry</li>
-    </ul> -->
-  </div>
+  <div class="column__right"></div>
 </header>
-
+<hr>
 <div class="post">
   {{ content }}
 

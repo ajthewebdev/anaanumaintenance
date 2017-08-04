@@ -34,7 +34,7 @@ permalink: /index/
       <div class="block__reveal"></div>
     </div>
     <div class="block__container" id="ani-5">
-      <a href="" class="block__content hero-btn">Get in touch</a>
+      <a href="{{ site.owner.mailto }}" class="block__content hero-btn">Get in touch</a>
       <div class="block__reveal"></div>
     </div>
   </div>
@@ -84,13 +84,13 @@ permalink: /index/
 <div class="laucher-wrapper">
   <div class="block__container">
     Let's create great products together.
-    <h3><a href="">Start a project</a></h3>
+    <h3><a href="{{ site.owner.mailto }}">Start a project</a></h3>
   </div>
 </div>
 
 <div class="row">
   <h2>Featured posts</h2>
-  {% assign featured_posts = (site.posts | where:"featured","true") %}
+  {% assign featured_posts = site.posts | where: "featured", "true" %}
   {% if featured_posts.size == 0 %}
     <h3>No featured post</h3>
   {% else %}
