@@ -387,10 +387,44 @@ img.lazy {
   }
 }
 
+#laucher,
+#hero,
+#featured {
+  margin-bottom: 3em;
+}
 #hero {
   .hero-btn {
     font-size: 1.3em;
     font-weight: bold;
     letter-spacing: -1px;
+  }
+}
+
+.horizontal-list {
+  li {
+    display: inline-block;
+    padding-right: 40px;
+  }
+}
+
+.share-page {
+  .fa-twitter {
+    color: #00aced;
+  }
+  .fa-facebook-official {
+    color: #3B5997;
+  }
+  .fa-linkedin {
+    color: #0074A1;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color__black;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

@@ -80,21 +80,23 @@ layout: default
   </ul>
 </div>
 
-<div class="laucher-wrapper">
+<div id="laucher">
   <div class="block__container">
     Let's create great products together.
     <h3><a href="{{ site.owner.mailto }}">Start a project</a></h3>
   </div>
 </div>
 
-<div class="row">
+<div class="row" id="featured">
   <h2>Featured posts</h2>
   {% assign featured_posts = site.posts | where: "featured", "true" %}
   {% if featured_posts.size == 0 %}
     <h3>No featured post</h3>
   {% else %}
   {% for post in featured_posts %}
-  <div class="column__left"><h3><time>{{ post.date | date_to_string }}</time></h3></div>
+  <div class="column__left">
+    <h3><time>{{ post.date | date_to_string }}</time></h3>
+  </div>
   <div class="column__right">
     <span>
       {% if post.link %}
@@ -106,6 +108,15 @@ layout: default
       </a>
     </span>
     <p>{{ post.excerpt | strip_html | truncatewords: 13 }}</p>
+    <p>
+      {% if post.link %}
+      <a href="{{ post.link }}">
+      {% else %}
+      <a href="{{ post.url | prepend: site.baseurl }}">
+      {% endif %}
+      Open
+      </a>
+    </p>
   </div>
   {% endfor %}
   {% endif %}

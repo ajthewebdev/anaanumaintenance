@@ -1,0 +1,13 @@
+<div class="post-tag">
+  <ul class="horizontal-list">
+    <li>&mdash;</li>
+    {% for tag in page.tags %}
+    <li>
+      <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
+        <span>{{ tag }}</span>
+      </a>
+    </li>
+    {% unless forloop.last %}{% endunless %}
+    {% endfor %}
+  </ul>
+</div>

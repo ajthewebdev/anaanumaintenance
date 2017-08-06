@@ -22,7 +22,7 @@ layout: default
       </div>
       {% if post.description %}
       <div class="list-post-desc">
-        {{ post.description }}
+        {{ post.description |  truncatewords: 13 }}
       </div>
       {% endif %}
     </a>

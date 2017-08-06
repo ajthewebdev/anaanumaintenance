@@ -1,12 +1,12 @@
 # Basic
 name:               "Anaanu Webstudio"
-tagline: "Everything websites"
-description: "A creative studio that helps people build effective websites."
+tagline:            "Everything websites"
+description:        "A creative studio that helps people build effective websites."
 
 # URL
 url:                "http://localhost:4000"
 timezone:           Africa/Accra
-permalink:          /blog/:year-:month-:day/:title/
+permalink:          /blog/:title/
 
 # Pagination
 paginate:           5
@@ -23,8 +23,8 @@ nav:
     url:            "/"
   - name:           "Blog"
     url:            "/blog/"
-  - name:           "Info"
-    url:            "#"
+  # - name:           "Info"
+  #   url:            "#"
 
 # Sass
 sass:
@@ -72,5 +72,12 @@ collections:
 disqus:
   id:               "anaanuwebstudio"
 
+twitter_username:   "anaanuwebstudio"
+facebook_username:   "anaanuwebstudio"
+linkedin_username:   "anaanuwebstudio"
+instagram_username:   "anaanuwebstudio"
+
 owner:
+  name:             "Adjetey"
+  desc:             "The warm face behind the creation of Anaanu"
   mailto:           "mailto:info@anaanu.site?subject=Let's work together"
