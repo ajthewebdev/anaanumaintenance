@@ -245,7 +245,8 @@ img.lazy {
       .image-caption {
         opacity: 0;
         transform: translate3d(-1rem,0,0);
-        transition: opacity 0.35s, transform 0.35s;
+        @include transition(opacity 0.35s, transform 0.35s);
+        // transition: ;
         position: relative;
         z-index: 1;
         p,
