@@ -2,6 +2,7 @@
 layout: default
 ---
 <header class="row" id="post-header">
+  <a href="{{ site.baseurl }}/"><h4>&larr; Index</h4></a>
   <div class="column__left">
   <p>
     <span>{{ page.service }}</span>
@@ -18,8 +19,6 @@ layout: default
 <div class="post">
   {{ content }}
 
-  <!-- <h3>Related projects</h3> -->
-  <!-- Disqus -->
   {% if page.comments and site.disqus.id %}
   <hr>
   <div class="post-disqus">
