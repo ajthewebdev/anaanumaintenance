@@ -244,9 +244,9 @@ img.lazy {
 
       .image-caption {
         opacity: 0;
-        transform: translate3d(-1rem,0,0);
-        @include transition(opacity 0.35s, transform 0.35s);
-        // transition: ;
+        @include transform(translate3d(-1rem,0,0));
+        @include transition(opacity 0.35s);
+        @include transition(transform 0.35s);
         position: relative;
         z-index: 1;
         p,
@@ -264,7 +264,7 @@ img.lazy {
       }
       a:hover .image-caption {
         opacity: 1;
-        transform: translate3d(0,0,0);
+        @include transform(translate3d(0,0,0));
       }
     }
 
