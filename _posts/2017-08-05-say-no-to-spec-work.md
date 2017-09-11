@@ -6,7 +6,10 @@ tags: [youtube, specwork]
 comments: true
 featured: true
 youtubeSrc: "https://www.youtube.com/embed/essNmNOrQto"
-image: /images/posts/no.png
+image:
+  path: /images/posts/no.png
+  height: 100
+  width: 100
 ---
 
 Spec work is any kind of creative work done by web designers (and other professionals) and submitted to would be clients before paying for the service.
