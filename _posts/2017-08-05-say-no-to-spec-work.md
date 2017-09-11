@@ -8,8 +8,8 @@ featured: true
 youtubeSrc: "https://www.youtube.com/embed/essNmNOrQto"
 image:
   path: /images/posts/no.png
-  height: 100
-  width: 100
+  height: 300
+  width: 300
 ---
 
 Spec work is any kind of creative work done by web designers (and other professionals) and submitted to would be clients before paying for the service.
