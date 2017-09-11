@@ -1,11 +1,17 @@
 # Basic
 name:               "Anaanu Webstudio"
-tagline: "Everything websites"
-description: "A creative studio that helps people build effective websites."
+tagline:            "Everything websites"
+description:        "A creative studio that helps people build effective websites."
+title:              "Anaanu Webstudio's Site"
+author:             "Adjetey Sowah"
+twitter:
+  username:         anaanuwebstudio
 
 copyright:
   year:             2017
   name:             Anaanu Webstudio
+
+logo:               /images/logo__color.svg
 
 # Google-analytics
 google-analytics:
