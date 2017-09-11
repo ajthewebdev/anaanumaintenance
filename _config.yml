@@ -18,7 +18,8 @@ google-analytics:
   id:               "UA-103582894-1"
 
 # URL
-url:                "https://thesowah.github.io/anaanu.site/" # the base hostname & protocol for your site
+# url:                "https://thesowah.github.io/anaanu.site/" # the base hostname & protocol for your site
+url:                "http://www.anaanu.site"
 
 timezone:           Africa/Accra
 permalink:          /blog/:year-:month-:day/:title/
