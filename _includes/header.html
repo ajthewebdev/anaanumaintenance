@@ -8,11 +8,24 @@
     </div>
     <nav class="header-nav">
       {% for nav in site.nav %}
+        {% assign current = page.url | split: '/' %}
+        {% assign node = nav.url | remove: '/' %}
         <a href="{{ nav.url | prepend: site.baseurl }}"
-        {% if page.url == nav.url %}class='active'{% endif %}>
+        {% if page.url == nav.url %}class='active'{% endif %}
+        {% if current[1] == node %}class='active'{% endif %}>
           {{ nav.name }}
         </a>
       {% endfor %}
     </nav>
+    <div class="header-about">
+      <h1>Welcome to Anaanu Webstudio.</h1>
+      <p>
+        Founded in 2016 to help creatives run their businesses online.
+        We are a creative studio - lead by independent Creative Director
+        Adjetey Sowah - passionate about designing and developing awesome digital
+        products.
+      </p>
+      <p>Connect via <a href="">Email</a> - <a href="">LinkedIn</a> - <a href="">Facebook</a> - <a href="">Twitter</a> - <a href="">Instagram</a>.</p>
+    </div>
   </div>
 </header>

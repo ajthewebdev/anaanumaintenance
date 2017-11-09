@@ -23,8 +23,6 @@ nav:
     url:            "/"
   - name:           "Blog"
     url:            "/blog/"
-  # - name:           "Info"
-  #   url:            "#"
 
 # Sass
 sass:
@@ -78,6 +76,20 @@ linkedin_username:   "anaanuwebstudio"
 instagram_username:   "anaanuwebstudio"
 
 owner:
-  name:             "Adjetey"
-  desc:             "The warm face behind the creation of Anaanu"
+  name:             "Adjetey Sowah"
   mailto:           "mailto:info@anaanu.site?subject=Let's work together"
+
+# Server Config options
+livereload: true     # You no longer need to include --livereload
+
+
+# ```yml
+# author:
+#   facebook:         your-id
+#   twitter:          your-id
+#   github:           your-id
+#   linkedin:         your-id
+#   medium:           your-id
+#   tumblr:           your-id
+#   email:            your-id@your-email.com
+# ```

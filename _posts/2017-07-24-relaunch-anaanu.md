@@ -2,7 +2,7 @@
 layout: post
 title: "Relaunching Anaanu Webstudio's website"
 date: 2017-07-25
-tags: [entrepreneurship, the-struggle]
+tags: [entrepreneurship, startup-life]
 comments: true
 featured: true
 ---
