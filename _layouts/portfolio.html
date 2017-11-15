@@ -18,12 +18,14 @@ layout: default
 <div class="post">
   {{ content }}
 
-  {% if page.comments and site.author.disqus %}
-  <hr>
-  <div class="post-disqus">
-    <h3>Comments</h3>
+    {% include share.html %}
+
+    <!-- Disqus -->
+    {% if page.comments and site.author.disqus %}
+
+    <div class="post-disqus">
       {% include disqus.html %}
-  </div>
-  {% endif %}
+    </div>
+    {% endif %}
 
 </div>
