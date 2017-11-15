@@ -1,7 +1,9 @@
 # Basic
 name:               "Anaanu Webstudio"
-tagline:            "Everything websites"
-description:        "A creative studio that helps people build effective websites."
+title:              "Anaanu Webstudio // Build Effective Websites"
+# URL to a site-wide logo
+logo:              "/assets/images/anaanu.site.png"
+author:             "thesowah"
 
 # URL
 url:                "http://localhost:4000"
@@ -37,6 +39,7 @@ defaults:
       type:         "pages"
     values:
       layout:       "page"
+      image:        "/assets/images/anaanu.site.png"
   -
     scope:
       path:         ""
@@ -49,6 +52,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-admin
+  - jekyll-sitemap
 
 exclude:
   - README.md
@@ -66,30 +70,15 @@ collections:
     output: true
     permalink: /blog/:path/
 
-# Disqus
-disqus:
-  id:               "anaanuwebstudio"
-
-twitter_username:   "anaanuwebstudio"
-facebook_username:   "anaanuwebstudio"
-linkedin_username:   "anaanuwebstudio"
-instagram_username:   "anaanuwebstudio"
-
-owner:
-  name:             "Adjetey Sowah"
-  mailto:           "mailto:info@anaanu.site?subject=Let's work together"
-
 # Server Config options
 livereload: true     # You no longer need to include --livereload
 
+author:
+  name:             "Adjetey Sowah"
+  facebook:         "anaanuwebstudio"
+  twitter:          "anaanuwebstudio"
+  instagram:        "anaanuwebstudio"
+  linkedin:         "anaanu-webstudio"
+  disqus:           "anaanuwebstudio"
+  email:            "info@anaanu.site"
 
-# ```yml
-# author:
-#   facebook:         your-id
-#   twitter:          your-id
-#   github:           your-id
-#   linkedin:         your-id
-#   medium:           your-id
-#   tumblr:           your-id
-#   email:            your-id@your-email.com
-# ```

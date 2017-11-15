@@ -1,8 +1,8 @@
 <footer class="footer" id="footer">
   <div class="footer-wrapper">
-    <a class="contact-email" href="{{ site.owner.mailto }}">
+    <a class="contact-email" href="mailto:{{ site.author.email }}?subject=Let's work together">
       <div>
-        <h1>info[at]anaanu.site</h1>
+        <h1>Contact us</h1>
         <p>Ready to get started? Email us, let's know how we can help you improve your business.</p>
       </div>
     </a>
@@ -15,10 +15,10 @@
     <div class="footer__bottom">
       <ul class="block__social-links">
         <li class="list__title">Follow @anaanuwebstudio on</li>
-        <li><a href="https://www.facebook.com/anaanuwebstudio/">facebook</a></li>
-        <li><a href="https://www.linkedin.com/company/anaanu-webstudio">linkedin</a></li>
-        <li><a href="https://www.instagram.com/anaanuwebstudio/">instagram</a></li>
-        <li><a href="https://twitter.com/anaanuwebstudio">twitter</a></li>
+        <li><a href="https://www.facebook.com/{{ site.author.facebook }}">facebook</a></li>
+        <li><a href="https://www.linkedin.com/company/{{ site.author.linkedin }}">linkedin</a></li>
+        <li><a href="https://www.instagram.com/{{ site.author.instagram }}">instagram</a></li>
+        <li><a href="https://twitter.com/{{ site.author.twitter }}">twitter</a></li>
       </ul>
       <div class="footer-logo">
         <a href="{{ site.baseurl }}/">

@@ -5,6 +5,10 @@ date: 2017-07-25
 tags: [entrepreneurship, startup-life]
 comments: true
 featured: true
+image:
+  path: /images/portfolio/anaanu/anaanu-brand800x600.svg
+  height: 300
+  width: 300
 ---
 
 I have worked so hard on this. Welcome to the relaunch of my studio's portfolio website www.anaanu.site

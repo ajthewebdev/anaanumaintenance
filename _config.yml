@@ -1,17 +1,9 @@
 # Basic
 name:               "Anaanu Webstudio"
-tagline:            "Everything websites"
-description:        "A creative studio that helps people build effective websites."
-title:              "Anaanu Webstudio's Site"
-author:             "Adjetey Sowah"
-twitter:
-  username:         anaanuwebstudio
-
-copyright:
-  year:             2017
-  name:             Anaanu Webstudio
-
-logo:               /images/logo__color.svg
+title:              "Anaanu Webstudio // Build Effective Websites"
+# URL to a site-wide logo
+logo:              "/assets/images/anaanu.site.png"
+author:             "thesowah"
 
 # Google-analytics
 google-analytics:
@@ -20,9 +12,8 @@ google-analytics:
 # URL
 # url:                "https://thesowah.github.io/anaanu.site/" # the base hostname & protocol for your site
 url:                "http://www.anaanu.site"
-
 timezone:           Africa/Accra
-permalink:          /blog/:year-:month-:day/:title/
+permalink:          /blog/:title/
 
 # Pagination
 paginate:           5
@@ -54,6 +45,7 @@ defaults:
       type:         "pages"
     values:
       layout:       "page"
+      image:        "/assets/images/anaanu.site.png"
   -
     scope:
       path:         ""
@@ -66,12 +58,14 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-admin
+  - jekyll-sitemap
 
 # for git pages
 gems:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-admin
+  - jekyll-sitemap
 
 exclude:
   - README.md
@@ -89,10 +83,11 @@ collections:
     output: true
     permalink: /blog/:path/
 
-# Disqus
-disqus:
-  id:               "anaanuwebstudio"
-
-owner:
-  mailto:           "mailto:info@anaanu.site?subject=Let's work together"
-
+author:
+  name:             "Adjetey Sowah"
+  facebook:         "anaanuwebstudio"
+  twitter:          "anaanuwebstudio"
+  instagram:        "anaanuwebstudio"
+  linkedin:         "anaanu-webstudio"
+  disqus:           "anaanuwebstudio"
+  email:            "info@anaanu.site"
