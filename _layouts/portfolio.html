@@ -1,31 +1,33 @@
 ---
 layout: default
 ---
-<header class="row" id="post-header">
-    <span class="muted">[{{ page.service }}]</span>
-    <h1 class="post-title">{{ page.title }}</h1>
-    <ul class="muted">
-      <li>
-        <span class="post-date">
-          Published <time>{{ page.date | date_to_string }}</time>
-        </span>
-      </li>
-      <li>
-      <i class="fa fa-clock-o" aria-hidden="true"></i> From {{ page.life }}
-      </li>
-    </ul>
-</header>
-<div class="post">
-  {{ content }}
+<div class="content-wrapper">
+  <header class="row" id="post-header">
+      <span class="muted">[{{ page.service }}]</span>
+      <h1 class="post-title">{{ page.title }}</h1>
+      <ul class="muted">
+        <li>
+          <span class="post-date">
+            Published <time>{{ page.date | date_to_string }}</time>
+          </span>
+        </li>
+        <li>
+        <i class="fa fa-clock-o" aria-hidden="true"></i> From {{ page.life }}
+        </li>
+      </ul>
+  </header>
+  <div class="post">
+    {{ content }}
 
-    {% include share.html %}
+      {% include share.html %}
 
-    <!-- Disqus -->
-    {% if page.comments and site.author.disqus %}
+      <!-- Disqus -->
+      {% if page.comments and site.author.disqus %}
 
-    <div class="post-disqus">
-      {% include disqus.html %}
-    </div>
-    {% endif %}
+      <div class="post-disqus">
+        {% include disqus.html %}
+      </div>
+      {% endif %}
 
+  </div>
 </div>

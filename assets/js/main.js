@@ -2,27 +2,24 @@ $(function() {
   ////////////////////////////////////////////////////////////
   //// Lazy load                                       ///////
   ////////////////////////////////////////////////////////////
-  $('.lazy').lazy();
+  $('.lazy').lazy({});
 
 
   ////////////////////////////////////////////////////////////
   //// Isotope                                         ///////
   ////////////////////////////////////////////////////////////
-
   // init Isotope
   var $grid = $('.grid').isotope({
    // options
     itemSelector: '.grid-item',
     layoutMode: 'fitRows',
     filter: '.init',
-    stagger: 30
-    // transitionDuration: '0.8s',
-    // hiddenStyle: {
-    //   opacity: 0
-    // },
-    // visibleStyle: {
-    //   animation: 'cover 1.5s ease-in forwards'
-    // }
+    stagger: 30,
+    getSortData: {
+      date: '[data-time]'
+    },
+    sortBy: 'date',
+    sortAscending: false
   });
 
   // filter items on button click
@@ -39,7 +36,7 @@ $(function() {
 
   // init after grid images load
   $('.grid img').on('load', function() {
-   $grid.isotope({filter: '*'}); //Isotope filter
+   $grid.isotope({ filter: '*' }); //Isotope filter
   });
 
   ////////////////////////////////////////////////////////////
