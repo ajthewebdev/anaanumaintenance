@@ -21,7 +21,6 @@ layout: default
       {%endfor%}
     </ul>
   </div>
-
   <div class="pointer"></div>
 </div>
 
@@ -29,24 +28,26 @@ layout: default
   <ul class="grid" id="grid">
     <li><div class="grid-sizer"></div></li>
     {% if site.portfolio.size == 0 %}
-    <li>
-      <h2>No portfolio items found</h2>
-    </li>
+      <li>
+        <h2>No portfolio items found</h2>
+      </li>
     {% else %}
-    {% for post in site.portfolio %}
-    <li>
-      <div class="grid-item {{ post.category | slugify: 'pretty' }}" data-time="{{ post.date }}">
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          <div class="image-caption">
-            <p>{{ post.service }}</p>
-            <h2>{{ post.shortname }}</h2>
-          </div>
-          <img class="lazy hide-on-mobile" src="{{ site.baseurl }}/{{ post.cover }}" data-src="{{ site.baseurl }}/{{ post.cover}}" alt="portfolio image">
-          <img class="lazy hide-on-desktop" src="{{ site.baseurl }}/{{ post.thumbnail }}" data-src="{{ site.baseurl }}/{{ post.thumbnail}}" alt="portfolio image">
-        </a>
-      </div>
-    </li>
-    {% endfor %}
+      {% for post in site.portfolio %}
+      <li>
+        <div class="grid-item {{ post.category | slugify: 'pretty' }}" data-time="{{ post.date }}">
+          <a href="{{ post.url | prepend: site.baseurl }}">
+            <div class="image-caption">
+              <div class="caption-wrapper">
+                <p>{{ post.service }}</p>
+                <h2>{{ post.shortname }}</h2>
+              </div>
+            </div>
+            <img class="lazy hide-on-mobile" src="{{ site.baseurl }}/{{ post.cover }}" data-src="{{ site.baseurl }}/{{ post.cover}}" alt="portfolio image">
+            <img class="lazy hide-on-desktop" src="{{ site.baseurl }}/{{ post.thumbnail }}" data-src="{{ site.baseurl }}/{{ post.thumbnail}}" alt="portfolio image">
+          </a>
+        </div>
+      </li>
+      {% endfor %}
     {% endif %}
   </ul>
 </div>
