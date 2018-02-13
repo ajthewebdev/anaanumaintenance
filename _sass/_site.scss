@@ -223,6 +223,7 @@ ul {
       margin-right: 30px;
       font-weight: bold;
       text-decoration: none;
+      display: inline-block;
 
       @include breakpoint($mobile) {
         display: block;
