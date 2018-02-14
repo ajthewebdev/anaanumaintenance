@@ -7,7 +7,7 @@ $(function() {
    // options
     itemSelector: '.grid-item',
     layoutMode: 'fitRows',
-    filter: '.init',
+    filter: '*',
     stagger: 30,
     getSortData: {
       date: '[data-time]'
