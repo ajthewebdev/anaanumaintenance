@@ -4,7 +4,7 @@ title: "Relaunching Anaanu Webstudio's website"
 date: 2017-07-25
 tags: [entrepreneurship, startup-life]
 comments: true
-featured: true
+featured: false
 image:
   path: /images/portfolio/anaanu/anaanu-brand800x600.svg
   height: 300
