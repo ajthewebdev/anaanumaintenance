@@ -12,7 +12,7 @@ google-analytics:
 
 # URL
 # url:                "https://thesowah.github.io/anaanu.site/" # the base hostname & protocol for your site
-url:                "http://www.anaanu.site"
+url:                "https://www.anaanu.site"
 timezone:           Africa/Accra
 permalink:          /blog/:title/
 
