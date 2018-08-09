@@ -10,7 +10,7 @@ life: "2018 - Present"
 shortname: "Kinaj website"
 comments: true
 image:
-  path: /images/portfolio/kinaj/showcase-mob.png
+  path: /images/portfolio/kinaj/mobilesite.png
   height: 300
   width: 300
 ---
